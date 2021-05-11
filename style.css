@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*
+    font-family: 'Karla', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(204, 43%, 93%);
+
+    font-family: 'Karla', sans-serif;
+    font-size: 15px;
+}
+
+.grid-container {
+    height: 70vh;
+    width: 45vw;
+
+    border-radius: 10px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.7fr 2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "main-text main-text main-text main-text"
+    "subscription subscription about-us about-us";
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.241);
+}
+
+/*Join Community tab*/
+
+.main-text { 
+    grid-area: main-text; 
+
+    border-radius: 8px 8px 0 0;
+    
+    padding: 5% 5% 2% 6%;
+    background-color: #ffffff;
+}
+
+.main-text>span {
+    display: block;
+}
+
+.main-text>.big-text {
+    font-size: 130%;
+    font-weight: 700;
+
+    margin-top: 5px;
+    letter-spacing: 1px;
+    color: hsl(179, 62%, 43%);
+}
+
+.main-text>.medium-text {
+    font-size: 110%;
+    font-weight: 700;
+
+    color: hsl(71, 73%, 54%);
+}
+
+.main-text>p {
+    line-height: 1.7;
+    color: hsl(218, 22%, 67%);
+}
+
+/*Join Community tab*/
+
+/*Subs tab*/
+
+.subscription { 
+    grid-area: subscription; 
+
+    border-radius: 0 0 0 8px;
+
+    padding: 5% 12%;
+    background-color: hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+}
+
+.out {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+
+.subscription>.out>.in {
+    font-size: 200%;
+    font-weight: 700;
+
+    
+    margin: auto 10px 0 0;
+}
+
+.subscription>.out>div:nth-child(2) {
+    color: hsla(203, 44%, 93%, 0.85);
+}
+
+button {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 110%;
+    color: hsl(203, 44%, 93%);
+    text-decoration: none;
+    text-align: center;
+
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 0 4px 10px #0000003a;
+
+    margin: 5px auto 10px;
+    padding: 5% 20%;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+/*Subs tab*/
+
+/*NO MANS LAND*/
+
+.mon-us {
+    font-size: 120%;
+    font-weight: 700;
+    color: hsl(204, 43%, 93%);
+
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+/*NO MANS LAND*/
+
+/*Why us tab*/
+
+.about-us { 
+    grid-area: about-us; 
+
+    border-radius: 0 0 8px 0;
+
+    padding: 5% 12%;
+    background-color: hsl(179, 45%, 51%);
+}
+
+.about-us>p {
+    font-size: 85%;
+    font-weight: 400;
+    color: hsla(203, 44%, 93%, 0.85);
+    
+    text-align: left;
+    line-height: 1.4;
+}
+
+/*Why us tab*/
+
+/*Links*/
+.attribution {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 16px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*Mobile version*/
+
+@media screen and (max-width: 375px) {
+    
+    body {
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
+    }
+
+    .grid-container {
+        height: 80vh;
+        width: 82vw;
+    
+        display: flex;
+        flex-flow: column nowrap;
+    
+        margin-bottom: 17%;
+    }
+
+/*Join Community tab*/
+
+    .main-text { 
+        border-radius: 6px 6px 0 0;
+        
+        padding: 5% 8% 2% 8%;
+    }
+    
+    .main-text>.big-text {
+        margin-top: 6%;
+    }
+    
+    .main-text>.medium-text {
+        font-size: 105%;  
+        margin-top: 2%;  
+    }
+
+    .main-text>p {
+        font-size: 90%;
+        line-height: 1.8;
+        margin-bottom: 10%;
+    }
+
+/*Join Community tab*/
+
+/*Substab*/
+
+    .subscription { 
+
+        border-radius: 0;
+
+        padding: 5% 8%;
+    }
+
+    button {
+        margin: 5% auto 4%;
+    }
+
+/*Substab*/
+
+    .mon-us {
+        margin-top: 4%;
+    }
+
+/*Why us tab*/
+
+    .about-us { 
+        border-radius: 0 0 6px 6px;
+        padding: 5% 8%;
+    }
+
+    .about-us>p {
+        font-size: 90%;
+        text-align: left;
+        line-height: 1.5;
+        margin-bottom: 4%;
+    }
+
+/*Why us tab*/
+
+    .attribution {
+        display: none;
+    }
+    
+}
